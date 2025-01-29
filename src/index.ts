@@ -1,4 +1,4 @@
-// import { InvalidInternalDefinitionParameterError } from '@gammarers/aws-cdk-errors';
+import { InvalidInternalDefinitionParameterError } from '@gammarers/aws-cdk-errors';
 import * as events from 'aws-cdk-lib/aws-events';
 import { Construct } from 'constructs';
 
@@ -8,6 +8,9 @@ import { Construct } from 'constructs';
  * type omitKeys = 'eventPattern';
  * export interface CodePipelineStateChangeDetectionEventRuleProps extends Omit<events.RuleProps, 'eventPattern'> {}
  */
+
+// RUNNING | SUCCEEDED | FAILED | TIMED_OUT | ABORTED | PENDING_REDRIVE
+
 export interface StepFunctionsExecutionStatusChangeDetectionEventRuleProps extends events.RuleProps {
 }
 
@@ -20,18 +23,16 @@ export class StepFunctionsExecutionStatusChangeDetectionEventRule extends events
           throw new InvalidInternalDefinitionParameterError('eventPattern');
         }
         return {
-          source: ['aws.codepipeline'],
-          detailType: ['CodePipeline Pipeline Execution State Change'],
-          //          detail: {
-          //            state: props.targetStates,
-          //          },
+          source: ['aws.states'],
+          detailType: ['Step Functions Execution Status Change'],
           detail: (() => {
-            if (props.targetStates) {
-              return {
-                state: props.targetStates,
-              };
-            }
-            return undefined;
+            // if (props.targetStateMachineArn) {
+            // if (props.targetStates) {
+            //  return {
+            //    status: ['FAILED', 'TIMED_OUT'],
+            //  };
+            // }
+            return { status: ['FAILED', 'TIMED_OUT'] };
           })(),
         };
       })(),

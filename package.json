@@ -1,5 +1,6 @@
 {
   "name": "@gammarers/aws-step-functions-execution-status-change-detection-event-rule",
+  "description": "This an AWS Step Functions execution status change detection event rule.",
   "repository": {
     "type": "git",
     "url": "https://github.com/gammarers/aws-step-functions-execution-status-change-detection-event-rule.git"

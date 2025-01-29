@@ -7,6 +7,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   jsiiVersion: '5.7.x',
   defaultReleaseBranch: 'main',
   name: '@gammarers/aws-step-functions-execution-status-change-detection-event-rule',
+  description: 'This an AWS Step Functions execution status change detection event rule.',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-step-functions-execution-status-change-detection-event-rule.git',
   deps: [

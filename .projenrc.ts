@@ -9,6 +9,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@gammarers/aws-step-functions-execution-status-change-detection-event-rule',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-step-functions-execution-status-change-detection-event-rule.git',
+  deps: [
+    '@gammarers/aws-cdk-errors@^1.2.10',
+  ],
   releaseToNpm: false, // todo:temp
   npmAccess: javascript.NpmAccess.PUBLIC,
   minNodeVersion: '18.0.0',

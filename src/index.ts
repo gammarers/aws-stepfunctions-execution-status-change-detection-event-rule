@@ -11,7 +11,17 @@ import { Construct } from 'constructs';
 
 // RUNNING | SUCCEEDED | FAILED | TIMED_OUT | ABORTED | PENDING_REDRIVE
 
+export enum TargetStatus {
+  RUNNING = 'RUNNING',
+  SUCCEEDED = 'SUCCEEDED',
+  FAILED = 'FAILED',
+  TIMED_OUT = 'TIMED_OUT',
+  ABORTED = 'ABORTED',
+  PENDING_REDRIVE = 'PENDING_REDRIVE',
+}
+
 export interface StepFunctionsExecutionStatusChangeDetectionEventRuleProps extends events.RuleProps {
+  readonly targetStatuses?: TargetStatus[];
 }
 
 export class StepFunctionsExecutionStatusChangeDetectionEventRule extends events.Rule {
@@ -27,11 +37,9 @@ export class StepFunctionsExecutionStatusChangeDetectionEventRule extends events
           detailType: ['Step Functions Execution Status Change'],
           detail: (() => {
             // if (props.targetStateMachineArn) {
-            // if (props.targetStates) {
-            //  return {
-            //    status: ['FAILED', 'TIMED_OUT'],
-            //  };
-            // }
+            if (props.targetStatuses) {
+              return { status: props.targetStatuses };
+            }
             return { status: ['FAILED', 'TIMED_OUT'] };
           })(),
         };

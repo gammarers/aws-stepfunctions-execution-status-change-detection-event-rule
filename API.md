@@ -339,6 +339,7 @@ const stepFunctionsExecutionStatusChangeDetectionEventRuleProps: StepFunctionsEx
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRuleProps.property.eventBus">eventBus</a></code> | <code>aws-cdk-lib.aws_events.IEventBus</code> | The event bus to associate with this rule. |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRuleProps.property.schedule">schedule</a></code> | <code>aws-cdk-lib.aws_events.Schedule</code> | The schedule or rate (frequency) that determines when EventBridge runs the rule. |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRuleProps.property.targets">targets</a></code> | <code>aws-cdk-lib.aws_events.IRuleTarget[]</code> | Targets to invoke when this rule matches an event. |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRuleProps.property.targetStatuses">targetStatuses</a></code> | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus">TargetStatus</a>[]</code> | *No description.* |
 
 ---
 
@@ -464,5 +465,61 @@ target input, use `addTarget(target[, inputOptions])`.
 
 ---
 
+##### `targetStatuses`<sup>Optional</sup> <a name="targetStatuses" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRuleProps.property.targetStatuses"></a>
 
+```typescript
+public readonly targetStatuses: TargetStatus[];
+```
+
+- *Type:* <a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus">TargetStatus</a>[]
+
+---
+
+
+
+## Enums <a name="Enums" id="Enums"></a>
+
+### TargetStatus <a name="TargetStatus" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus"></a>
+
+#### Members <a name="Members" id="Members"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.RUNNING">RUNNING</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.SUCCEEDED">SUCCEEDED</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.FAILED">FAILED</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.TIMED_OUT">TIMED_OUT</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.ABORTED">ABORTED</a></code> | *No description.* |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.PENDING_REDRIVE">PENDING_REDRIVE</a></code> | *No description.* |
+
+---
+
+##### `RUNNING` <a name="RUNNING" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.RUNNING"></a>
+
+---
+
+
+##### `SUCCEEDED` <a name="SUCCEEDED" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.SUCCEEDED"></a>
+
+---
+
+
+##### `FAILED` <a name="FAILED" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.FAILED"></a>
+
+---
+
+
+##### `TIMED_OUT` <a name="TIMED_OUT" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.TIMED_OUT"></a>
+
+---
+
+
+##### `ABORTED` <a name="ABORTED" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.ABORTED"></a>
+
+---
+
+
+##### `PENDING_REDRIVE` <a name="PENDING_REDRIVE" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.TargetStatus.PENDING_REDRIVE"></a>
+
+---
 

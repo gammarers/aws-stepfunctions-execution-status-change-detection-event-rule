@@ -43,6 +43,7 @@ new StepFunctionsExecutionStatusChangeDetectionEventRule(scope: Construct, id: s
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.with">with</a></code> | Applies one or more mixins to this construct. |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.addEventPattern">addEventPattern</a></code> | Adds an event pattern filter to this rule. |
 | <code><a href="#@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.addTarget">addTarget</a></code> | Adds a target to the rule. The abstract class RuleTarget can be extended to define new targets. |
@@ -56,6 +57,27 @@ public toString(): string
 ```
 
 Returns a string representation of this construct.
+
+##### `with` <a name="with" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
 
 ##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@gammarers/aws-stepfunctions-execution-status-change-detection-event-rule.StepFunctionsExecutionStatusChangeDetectionEventRule.applyRemovalPolicy"></a>
 
